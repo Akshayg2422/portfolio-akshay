@@ -27,24 +27,15 @@
     padding: 1rem;
 }
 
-.hero .content p:first-child {
+.hero .content h1:first-child {
     font-style: italic;
-    font-size: .9rem;
-}
-
-.hero .content p:nth-child(2) {
-    font-size: 1.9rem;
-}
-
-.hero .content p:nth-child(3) {
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 700;
 }
 
-
-.hero .content p:nth-child(4) {
-    font-size: 2.2rem;
-    font-style: italic;
+.hero .content p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
 }
 
 .hero .button {
@@ -61,11 +52,11 @@
 }
 
 @media screen and (max-width:940px) {
-    .hero .content p:nth-child(3) {
+    .hero .content h1:first-child {
         font-size: 2.6rem;
     }
 
-    .hero .content p:nth-child(4) {
+    .hero .content p:first-child {
         font-size: 1.6rem;
     }
 }

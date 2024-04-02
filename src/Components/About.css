@@ -24,8 +24,10 @@
     padding: 3rem;
 }
 
-.about .col-2 p:first-of-type {
-    margin: 2rem 0;
+.about .col-2 p:nth-child(3) {
+    margin: 1rem 0;
+    font-size: 1.9rem;
+    font-weight: 610;
 }
 
 .about .col-2 p:nth-child(4) {

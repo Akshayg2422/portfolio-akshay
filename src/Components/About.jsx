@@ -1,18 +1,18 @@
 import React from 'react'
-import john from '../assets/Images/john-doe.png'
+import akshay from '../assets/Images/akshay.png'
 import './About.css'
 
 const About = () => {
     return (
         <div className='about' id='about'>
             <div className='container'>
-                <img src={john} alt='john' />
+                <img src={akshay} alt='john' />
                 <div className='col-2'>
                     <h2>About</h2>
                     <span className='line'></span>
-                    <p>Intense is an International Financial Planning company with offices i n multiple jurisdictions over the world. Working with Intense gives me the ability to advise internat ional expatriates living in the middle east from where I live in USA.</p>
-                    <p>I am John Doe, a senior advisor for an independently owned financial planning company called Intense.</p>
-                    <button className='button'>Explore More</button>
+                    <p>I am Akshay G</p>
+                    <p>I am a frontend web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.</p>
+                    <button className='button'>Download Resume</button>
                 </div>
             </div>
         </div>

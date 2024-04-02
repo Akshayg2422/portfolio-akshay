@@ -14,7 +14,7 @@ const Navbar = () => {
     // change nav color when scrolling
     const [color, setColor] = useState(false)
     const changeColor = () => {
-        window.scrollY >= 90 ? setColor(true) : setColor(false)
+        window.scrollY >= 390 ? setColor(true) : setColor(false)
     }
 
     window.addEventListener('scroll', changeColor)
@@ -41,7 +41,7 @@ const Navbar = () => {
                         <Link to="about" spy={true} smooth={true} hashSpy={true} offset={10} duration={500} onClick={closeMenu}>About</Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to="testimonials" spy={true} smooth={true} hashSpy={true} offset={-100} duration={500} onClick={closeMenu}>Testimonials</Link>
+                        <Link to="projects" spy={true} smooth={true} hashSpy={true} offset={-100} duration={500} onClick={closeMenu}>Projects</Link>
                     </li>
                     <li className='nav-item'>
                         <Link to="demo" spy={true} smooth={true} hashSpy={true} offset={-150} duration={500} onClick={closeMenu}>Demo</Link>

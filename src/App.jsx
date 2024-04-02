@@ -2,9 +2,9 @@ import React from 'react'
 import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
 import About from './Components/About'
-import Testimonials from './Components/Testimonials'
 import Demo from './Components/Demo'
 import Footer from './Components/Footer'
+import Projects from './Components/Projects'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <Testimonials />
+      <Projects />
       <Demo />
       <Footer />
     </div>

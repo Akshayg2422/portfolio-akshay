@@ -5,11 +5,11 @@ const Hero = () => {
     return (
         <div className='hero' id='hero'>
             <div className='content'>
-                <p>Call us</p>
-                <p>1-800-123-4567</p>
-                <p>Because Money</p>
-                <p>Doesn't come with instructions</p>
-                <button href='/' className='button'>Free Consultation</button>
+                <h1>Welcome to <span style={{ color: 'var(--secondary-color)' }}>My Website</span></h1>
+                <p>Hello there! I'm Akshay G, a diligent React JS Developer based in
+                    Gummidipoondi, Chennai. Explore my projects, skills, and services to
+                    get to know me better.</p>
+                {/* <button href='/' className='button'>Download Resume</button> */}
             </div>
         </div>
     )
