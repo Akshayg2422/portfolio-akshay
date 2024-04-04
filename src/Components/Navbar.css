@@ -10,7 +10,8 @@
 }
 
 .header-bg {
-    background-color: rgba(0, 42, 126, .9);
+    /* background-color: rgba(0, 0, 0, .9); */
+    background: var(--gradient2)
 }
 
 .header .navbar {
@@ -23,8 +24,12 @@
     padding: 0 1rem;
 }
 
-.header .nav-menu a {
+.header .nav-menu li {
     color: #ffffff;
+}
+
+.header .nav-menu .active {
+    color: var(--primary-color);
 }
 
 .header .navbar img {
@@ -43,7 +48,7 @@
 
 .header .nav-item a:hover {
     padding-bottom: 12px;
-    border-bottom: 3px solid var(--secondary-color);
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .hamburger {

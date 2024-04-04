@@ -35,16 +35,16 @@ const Navbar = () => {
                 </div>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
                     <li className='nav-item'>
-                        <Link to="hero" spy={true} smooth={true} hashSpy={true} offset={-100} duration={500} onClick={closeMenu}>Home</Link>
+                        <Link to="hero" spy={true} smooth={false} hashSpy={true} offset={-100} duration={500} onClick={closeMenu}>Home</Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to="about" spy={true} smooth={true} hashSpy={true} offset={10} duration={500} onClick={closeMenu}>About</Link>
+                        <Link to="about" spy={true} smooth={false} hashSpy={true} offset={-90} duration={500} onClick={closeMenu}>About</Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to="projects" spy={true} smooth={true} hashSpy={true} offset={-100} duration={500} onClick={closeMenu}>Projects</Link>
+                        <Link to="projects" spy={true} smooth={false} hashSpy={true} offset={-100} duration={500} onClick={closeMenu}>Projects</Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to="demo" spy={true} smooth={true} hashSpy={true} offset={-150} duration={500} onClick={closeMenu}>Demo</Link>
+                        <Link to="skills" spy={true} smooth={false} hashSpy={true} offset={-40} duration={500} onClick={closeMenu}>Skills</Link>
                     </li>
                 </ul>
             </nav>

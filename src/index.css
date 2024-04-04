@@ -1,9 +1,11 @@
 :root {
-  --primary-color: #002a7e;
-  --primary-dark: #021d55;
-  --secondary-color: #f96a07;
-  --secondary-dark: #d1600e;
+  --primary-color: #f70000;
+  --primary-dark: #c10101;
   --overlay: rgba(0, 0, 0, .7);
+  --text-color: #ffffff;
+  --gradient: linear-gradient(125.3deg, #000000 10.6%, #000 97.7%);
+  --gradient2: linear-gradient(125.3deg, #c30f0f 10.6%, #000 97.7%);
+  --gradient3: linear-gradient(98.3deg, #000000 10.6%, #ff0000 97.7%);
 }
 
 * {
@@ -21,6 +23,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.2rem;
   line-height: 1.2;
+  background: var(--gradient)
 }
 
 code {
@@ -42,15 +45,15 @@ a {
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
-  background-color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  background: var(--primary-color);
+  border: 1px solid var(--gradient);
   border-radius: 4px;
   cursor: pointer;
 }
 
 .button:hover {
-  background: var(--primary-dark);
-  border: 1px solid var(--primary-dark);
+  background: var(--gradient3);
+  border: 1px solid var(--primary-color);
 }
 
 .line {
@@ -59,4 +62,15 @@ a {
   height: 3px;
   margin: 5px auto;
   background-color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+p {
+  color: var(--text-color);
 }

@@ -1,0 +1,60 @@
+/* Projects.module.css */
+
+.container {
+    width: 1000px;
+    margin: 4rem;
+}
+
+.container .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin: 4rem 0 4rem 0;
+}
+
+.card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 358.5px;
+}
+
+.card:hover {
+    background: var(--gradient3)
+}
+
+.card img {
+    border-radius: 50px;
+    margin-top: -2rem;
+    border: 3px solid #eee;
+}
+
+.card p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 12px;
+}
+
+.card a {
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 700;
+    transition: transform .2s;
+}
+
+.card a:hover {
+    text-decoration: underline;
+    zoom: 1.2;
+}
+
+@media screen and (max-width: 940px) {
+    .container {
+        width: 90%;
+        margin-left: 9%;
+    }
+
+    .container .content {
+        grid-template-columns: 1fr;
+    }
+}

@@ -2,9 +2,9 @@ import React from 'react'
 import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
 import About from './Components/About'
-import Demo from './Components/Demo'
 import Footer from './Components/Footer'
 import Projects from './Components/Projects'
+import Skills from './Components/Skills'
 
 function App() {
   return (
@@ -13,7 +13,8 @@ function App() {
       <Hero />
       <About />
       <Projects />
-      <Demo />
+      <Skills />
+      {/* <Demo /> */}
       <Footer />
     </div>
   );

@@ -1,20 +1,7 @@
 .hero {
-    background-color: var(--overlay);
     color: #fff;
     height: 100vh;
-    width: 100%;
-    position: relative;
-}
-
-.hero:before {
-    content: '';
-    background: url('../assets/Images/hero.jpg') no-repeat center center/cover;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    /* background: url('../assets/Images/hero.jpg') no-repeat center center/cover; */
 }
 
 .hero .content {
@@ -25,38 +12,177 @@
     max-width: 1100px;
     margin: auto;
     padding: 1rem;
-}
-
-.hero .content h1:first-child {
-    font-style: italic;
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-.hero .content p {
-    font-size: 1.2rem;
-    margin: 1rem 0;
-}
-
-.hero .button {
-    margin: 1rem 0;
-    width: 300px;
-    background-color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-    color: #333;
-}
-
-.hero .button:hover {
-    background-color: var(--secondary-dark);
-    border: 1px solid var(--secondary-dark);
+    text-align: center;
 }
 
 @media screen and (max-width:940px) {
-    .hero .content h1:first-child {
-        font-size: 2.6rem;
+    .content .h1 {
+        margin-top: -30px;
     }
+}
 
-    .hero .content p:first-child {
-        font-size: 1.6rem;
-    }
+/* social */
+
+.social-card {
+    position: relative;
+    height: 300px;
+    width: 230px;
+}
+
+.social-card .boxshadow {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 1px solid red;
+    transform: scale(0.8);
+    box-shadow: rgb(255, 0, 0) 0px 30px 70px 0px;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.social-card .main {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: red;
+    background: linear-gradient(0deg, rgb(62, 0, 0) 0%, rgb(255, 0, 0) 60%, rgb(62, 0, 0) 100%);
+    position: relative;
+    -webkit-clip-path: polygon(0 40px, 40px 0, calc(100% - 40px) 0, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0 calc(100% - 40px));
+    clip-path: polygon(0 40px, 40px 0, calc(100% - 40px) 0, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0 calc(100% - 40px));
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0 calc(100% - 40px));
+    clip-path: polygon(0 0, 100% 0, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0 calc(100% - 40px));
+    box-shadow: rgb(255, 0, 0) 0px 7px 29px 0px;
+    transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.social-card .main .top {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    z-index: 2;
+    border-top: 115px solid black;
+    border-left: 115px solid transparent;
+    border-right: 115px solid transparent;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.social-card .main .side {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 101%;
+    background: black;
+    -webkit-clip-path: polygon(0% 0%, 50% 0, 95% 45%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 50% 0, 95% 45%, 100% 100%, 0% 100%);
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
+}
+
+.social-card .main .left {
+    left: 0;
+}
+
+.social-card .main .right {
+    right: 0;
+    transform: translateX(50%) scale(-1, 1);
+}
+
+.social-card .main .title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90px;
+    font-weight: bold;
+    font-size: 25px;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.2s ease-out 0s;
+}
+
+.social-card .main .button-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.social-card .main .button-container .button {
+    position: absolute;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 81% 100%, 21% 100%);
+    clip-path: polygon(0 0, 100% 0, 81% 100%, 21% 100%);
+    background: black;
+    border: none;
+    color: white;
+    display: grid;
+    place-content: center;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.social-card .main .button-container .button .svg {
+    width: 15px;
+    transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.social-card .main .button-container .button:nth-child(1) {
+    bottom: 300px;
+    transition-delay: 0.4s;
+}
+
+.social-card .main .button-container .button:nth-child(2) {
+    bottom: 300px;
+    transition-delay: 0.6s;
+}
+
+.social-card .main .button-container .button:nth-child(3) {
+    bottom: 300px;
+    transition-delay: 0.8s;
+}
+
+.social-card .main .button-container .button:hover .svg {
+    transform: scale(1.2);
+}
+
+.social-card .main .button-container .button:active .svg {
+    transform: scale(0.7);
+}
+
+.social-card:hover .main {
+    transform: scale(1.1);
+}
+
+.social-card:hover .main .top {
+    top: -50px;
+}
+
+.social-card:hover .main .left {
+    left: -50px;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+}
+
+.social-card:hover .main .right {
+    right: -50px;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+}
+
+.social-card:hover .main .title {
+    opacity: 1;
+    transition: all 0.2s ease-out 1.3s;
+}
+
+.social-card:hover .main .button-container .button:nth-child(1) {
+    bottom: 80px;
+    transition-delay: 0.8s;
+}
+
+.social-card:hover .main .button-container .button:nth-child(2) {
+    bottom: 40px;
+    transition-delay: 0.6s;
+}
+
+.social-card:hover .main .button-container .button:nth-child(3) {
+    bottom: 0;
+    transition-delay: 0.4s;
 }
