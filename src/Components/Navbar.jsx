@@ -44,7 +44,7 @@ const Navbar = () => {
                         <Link to="projects" spy={true} smooth={false} hashSpy={true} offset={-100} duration={500} onClick={closeMenu}>Projects</Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to="skills" spy={true} smooth={false} hashSpy={true} offset={-40} duration={500} onClick={closeMenu}>Skills</Link>
+                        <Link to="skills" spy={true} smooth={false} hashSpy={true} offset={-90} duration={500} onClick={closeMenu}>Skills</Link>
                     </li>
                 </ul>
             </nav>

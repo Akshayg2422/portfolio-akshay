@@ -10,6 +10,11 @@
     font-weight: 300;
 }
 
+.col-md-6 img {
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
 button {
     margin-top: 1rem;
 }
