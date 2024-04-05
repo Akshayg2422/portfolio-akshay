@@ -1,12 +1,12 @@
 {
-  "homepage":"https://Akshayg2422.github.io/porfolio-akshay",
-  "name": "porfolio-akshay",
+  "homepage": "https://Akshayg2422.github.io/portfolio-akshay/",
+  "name": "portfolio-akshay",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
@@ -20,6 +20,7 @@
     "react-scroll": "^1.9.0"
   },
   "devDependencies": {
+    "base": "/porfolio-akshay",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
