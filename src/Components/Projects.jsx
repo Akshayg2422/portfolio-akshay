@@ -8,7 +8,7 @@ import styles from './Projects.module.css'
 
 const Projects = () => {
     return (
-        <div className={styles.projects} >
+        <div className={'pt-3'} >
             <div className={styles.container} id='projects'>
                 <h2>Projects</h2>
                 <span className='line'></span>

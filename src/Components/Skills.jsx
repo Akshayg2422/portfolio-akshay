@@ -8,7 +8,7 @@ function Skills() {
             <span className='line'></span>
 
             <div className={'row'}>
-                <div className={'col-md-6'}>
+                <div className={'col-md-6 m-0 m-sm-0'}>
 
                     <div className={styles.skillBox}>
                         <span className={styles.title}>Javascript</span>
@@ -66,7 +66,7 @@ function Skills() {
 
                 </div>
 
-                <div className={'col-md-6'}>
+                <div className={'col-md-6 m-0 m-sm-0'}>
                     <div className={styles.skillBox}>
                         <span className={styles.title}>React</span>
                         <div className={styles.skillBar}>
