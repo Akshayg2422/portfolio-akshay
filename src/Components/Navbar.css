@@ -50,6 +50,11 @@
     border-bottom: 3px solid var(--primary-color);
 }
 
+.header .nav-item.active a {
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--primary-color);
+}
+
 .hamburger {
     display: none;
 }

@@ -1,5 +1,14 @@
 import React from 'react';
 import styles from './Skills.module.css';
+import {
+    motion,
+    useScroll,
+    useSpring,
+    useTransform,
+    useMotionValue,
+    useVelocity,
+    useAnimationFrame
+} from "framer-motion";
 
 function Skills() {
     return (

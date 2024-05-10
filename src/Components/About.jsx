@@ -2,6 +2,7 @@ import React from 'react';
 import akshay from '../assets/Images/akshay.png';
 import './About.css';
 import path_to_your_resume from '../assets/akshay.pdf'
+import { motion } from 'framer-motion';
 
 const About = () => {
     const downloadResume = () => {
@@ -26,7 +27,12 @@ const About = () => {
                 <div className={'col-md-6 mt-md-5 align-self-center'}>
                     <p>I am Akshay G</p>
                     <p>I am a frontend web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.</p>
-                    <button className='button' onClick={downloadResume}>Download Resume</button>
+                    <motion.button className='button' onClick={downloadResume}
+                        whileHover={{
+                            scale: 1.1,
+                            x: 12
+                        }}
+                    >Download Resume</motion.button>
                 </div>
             </div>
         </div>
