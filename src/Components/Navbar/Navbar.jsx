@@ -29,7 +29,8 @@ const Navbar = () => {
         { label: 'Home', to: 'hero' },
         { label: 'About', to: 'about' },
         { label: 'Projects', to: 'projects' },
-        { label: 'Skills', to: 'skills' }
+        { label: 'Skills', to: 'skills' },
+        { label: 'Experience', to: 'experience' }
     ];
 
     return (

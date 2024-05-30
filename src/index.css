@@ -6,6 +6,7 @@
   --gradient: linear-gradient(125.3deg, #000000 10.6%, #000 97.7%);
   --gradient2: linear-gradient(125.3deg, #c30f0f 10.6%, #000 97.7%);
   --gradient3: linear-gradient(98.3deg, #000000 10.6%, #ff0000 97.7%);
+  --gradientJobDescription: linear-gradient(98.3deg, #a30b0b 10.6%, #ff0000 97.7%);
 }
 
 * {

@@ -1,0 +1,54 @@
+/* JobDescription.css */
+
+.custom-text-container ul {
+    list-style-type: disc;
+    /* Ensure bullets are displayed */
+    padding-left: 20px;
+    /* Indentation for list items */
+}
+
+.custom-text-container li {
+    margin-bottom: 10px;
+    /* Spacing between list items */
+    color: var(--text-color);
+    /* Color for text */
+}
+
+/* Different color for bullet points */
+.custom-text-container li::marker {
+    color: var(--primary-color);
+    /* Bullet color */
+}
+
+/* JobDescription.css */
+
+.gradient-border {
+    position: relative;
+    padding: 1rem;
+    /* Adjust padding to prevent content overlap with border */
+    border-radius: 4px;
+    /* Optional: for rounded corners */
+}
+
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    /* Adjust based on border width */
+    left: -2px;
+    /* Adjust based on border width */
+    right: -2px;
+    /* Adjust based on border width */
+    bottom: -2px;
+    /* Adjust based on border width */
+    background: var(--primary-color);
+    border-radius: inherit;
+    /* Inherit the border-radius */
+    z-index: -1;
+    /* Ensure it is behind the content */
+}
+
+p {
+    color: #fff;
+    font-weight: 300;
+}

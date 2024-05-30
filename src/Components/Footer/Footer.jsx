@@ -18,6 +18,9 @@ const Footer = () => {
                     <li className='nav-item'>
                         <a href='#skills'>Skills</a>
                     </li>
+                    <li className='nav-item'>
+                        <a href='#experience'>Experience</a>
+                    </li>
                 </ul>
                 {/* <span className='line'></span> */}
             </div>
