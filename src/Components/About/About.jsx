@@ -1,7 +1,7 @@
 import React from 'react';
-import akshay from '../assets/Images/akshay.png';
+import akshay from '../../assets/Images/akshay.png';
 import './About.css';
-import path_to_your_resume from '../assets/akshay.pdf'
+import path_to_your_resume from '../../assets/akshay.pdf'
 import { motion } from 'framer-motion';
 
 const About = () => {

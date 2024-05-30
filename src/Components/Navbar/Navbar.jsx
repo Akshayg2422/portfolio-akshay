@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import logo from '../assets/Images/logo.png';
+import logo from "../../assets/Images/logo.png"
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import './Navbar.css';
@@ -35,7 +35,7 @@ const Navbar = () => {
     return (
         <div className={`header ${color ? 'header-bg' : ''}`}>
             <nav className='navbar'>
-                <motion.a href='/' className='logo'
+                <motion.a href='' className='logo'
                     initial={{ y: -250 }}
                     animate={{ y: 0 }}
                     transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}

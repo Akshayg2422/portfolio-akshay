@@ -1,9 +1,9 @@
 import React from 'react'
-import project1 from '../assets/Images/project1.png'
-import project2 from '../assets/Images/project2.png'
-import project3 from '../assets/Images/project3.png'
-import project4 from '../assets/Images/Project4.png'
-import project5 from '../assets/Images/project5.png'
+import project1 from "../../assets/Images/project1.png";
+import project2 from '../../assets/Images/project2.png'
+import project3 from '../../assets/Images/project3.png'
+import project4 from '../../assets/Images/Project4.png'
+import project5 from '../../assets/Images/project5.png'
 import styles from './Projects.module.css'
 
 const Projects = () => {
