@@ -5,7 +5,7 @@ import Tab1 from '../Tab1/Tab1'
 import Tab2 from '../Tab2/Tab2';
 import Tab3 from '../Tab3/Tab3';
 import Tab4 from '../Tab4/Tab4';
-import upArrow from '../../assets/Images/upArrow.png'
+import BackToTopButton from '../BackToTopButton/BackToTopButton';
 
 function Experience() {
     const TABS = [
@@ -15,20 +15,6 @@ function Experience() {
         { id: "4", title: <div className="text-center pointer">Process Associate</div>, component: <Tab4 /> },
     ];
     const [selectedTab, setSelectedTab] = useState(TABS[0]);
-    const top = () => {
-        window.scrollTo(0, 0);
-    }
-
-    const style = {
-        borderRadius: '50px',
-        marginTop: '-5.3rem',
-        border: '2px solid #eee',
-        width: '60px',
-        height: '60px',
-        position: 'absolute',
-        right: 7,
-        cursor: 'pointer'
-    }
 
     return (
         <div id='experience'>
@@ -55,7 +41,7 @@ function Experience() {
                             </div>
                         </Col>
                     </Row>
-                    <img src={upArrow} style={style} onClick={top} alt='Top button' />
+                    <BackToTopButton />
                 </Container>
             </section>
 

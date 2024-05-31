@@ -1,124 +1,72 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import styles from './Skills.module.css';
 
-function Skills() {
+const Skills = () => {
+    const [isInView, setIsInView] = useState(false);
+    const controls = useAnimation();
+
+    useEffect(() => {
+        if (isInView) {
+            controls.start({
+                width: '100%',
+                transition: { duration: 2, ease: 'easeInOut' }
+            });
+        }
+    }, [isInView, controls]);
+
+    const handleScroll = () => {
+        const skillsSection = document.getElementById('skills');
+        if (skillsSection.getBoundingClientRect().top <= window.innerHeight * 0.75) {
+            setIsInView(true);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const skills = [
+        { title: 'Javascript', level: '70%', styleClass: styles.javascript },
+        { title: 'Html', level: '60%', styleClass: styles.html },
+        { title: 'Css', level: '60%', styleClass: styles.css },
+        { title: 'Scss', level: '60%', styleClass: styles.scss },
+        { title: 'Bootstrap', level: '60%', styleClass: styles.bootstrap },
+        { title: 'Typescript', level: '50%', styleClass: styles.typescript },
+        { title: 'React', level: '70%', styleClass: styles.react },
+        { title: 'Redux', level: '70%', styleClass: styles.redux },
+        { title: 'Redux-Saga', level: '70%', styleClass: styles.reduxSaga },
+        { title: 'React-Router', level: '50%', styleClass: styles.reactRouter },
+        { title: 'GitHub', level: '80%', styleClass: styles.github },
+        { title: 'Bitbucket', level: '90%', styleClass: styles.bitBucket },
+    ];
+
     return (
         <div className={'container'} id='skills'>
             <h2>Skills</h2>
             <span className='line'></span>
 
             <div className={'row'}>
-                <div className={'col-md-6 m-0 m-sm-0'}>
-
-                    <div className={styles.skillBox}>
-                        <span className={styles.title}>Javascript</span>
-                        <div className={styles.skillBar}>
-                            <span className={`${styles.skillPer} ${styles.javascript}`}>
-                                <span className={styles.tooltip}>70%</span>
-                            </span>
-                        </div>
-
+                {skills.map((skill, index) => (
+                    <div className={'col-md-6 m-0 m-sm-0'} key={index}>
                         <div className={styles.skillBox}>
-                            <span className={styles.title}>Html</span>
+                            <span className={styles.title}>{skill.title}</span>
                             <div className={styles.skillBar}>
-                                <span className={`${styles.skillPer} ${styles.html}`}>
-                                    <span className={styles.tooltip}>60%</span>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div className={styles.skillBox}>
-                            <span className={styles.title}>Css</span>
-                            <div className={styles.skillBar}>
-                                <span className={`${styles.skillPer} ${styles.css}`}>
-                                    <span className={styles.tooltip}>60%</span>
-                                </span>
+                                <motion.span
+                                    className={`${styles.skillPer} ${skill.styleClass}`}
+                                    initial={{ width: 0 }}
+                                    animate={isInView ? { width: skill.level } : { width: 0 }}
+                                    transition={{ duration: 2, ease: 'easeInOut' }}
+                                >
+                                    <span className={styles.tooltip}>{skill.level}</span>
+                                </motion.span>
                             </div>
                         </div>
                     </div>
-
-                    <div className={styles.skillBox}>
-                        <span className={styles.title}>Scss</span>
-                        <div className={styles.skillBar}>
-                            <span className={`${styles.skillPer} ${styles.scss}`}>
-                                <span className={styles.tooltip}>60%</span>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div className={styles.skillBox}>
-                        <span className={styles.title}>Bootstrap</span>
-                        <div className={styles.skillBar}>
-                            <span className={`${styles.skillPer} ${styles.bootstrap}`}>
-                                <span className={styles.tooltip}>60%</span>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div className={styles.skillBox}>
-                        <span className={styles.title}>Typescript</span>
-                        <div className={styles.skillBar}>
-                            <span className={`${styles.skillPer} ${styles.typescript}`}>
-                                <span className={styles.tooltip}>50%</span>
-                            </span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div className={'col-md-6 m-0 m-sm-0'}>
-                    <div className={styles.skillBox}>
-                        <span className={styles.title}>React</span>
-                        <div className={styles.skillBar}>
-                            <span className={`${styles.skillPer} ${styles.react}`}>
-                                <span className={styles.tooltip}>70%</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div className={styles.skillBox}>
-                        <span className={styles.title}>Redux</span>
-                        <div className={styles.skillBar}>
-                            <span className={`${styles.skillPer} ${styles.redux}`}>
-                                <span className={styles.tooltip}>70%</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div className={styles.skillBox}>
-                        <span className={styles.title}>Redux-Saga</span>
-                        <div className={styles.skillBar}>
-                            <span className={`${styles.skillPer} ${styles.reduxSaga}`}>
-                                <span className={styles.tooltip}>70%</span>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div className={styles.skillBox}>
-                        <span className={styles.title}>React-Router</span>
-                        <div className={styles.skillBar}>
-                            <span className={`${styles.skillPer} ${styles.reactRouter}`}>
-                                <span className={styles.tooltip}>50%</span>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div className={styles.skillBox}>
-                        <span className={styles.title}>GitHub</span>
-                        <div className={styles.skillBar}>
-                            <span className={`${styles.skillPer} ${styles.github}`}>
-                                <span className={styles.tooltip}>80%</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div className={styles.skillBox}>
-                        <span className={styles.title}>Bitbucket</span>
-                        <div className={styles.skillBar}>
-                            <span className={`${styles.skillPer} ${styles.bitBucket}`}>
-                                <span className={styles.tooltip}>90%</span>
-                            </span>
-                        </div>
-                    </div>
-
-                </div>
+                ))}
             </div>
         </div>
     );

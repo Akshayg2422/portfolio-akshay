@@ -1,7 +1,31 @@
-import JobDescription from '../../CommonComponent/JobDescription/JobDescription'
-import Logo from '../../assets/Logo/leoraLogo.png'
+import React, { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+import JobDescription from '../../CommonComponent/JobDescription/JobDescription';
+import Logo from '../../assets/Logo/leoraLogo.png';
 
 const Tab1 = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef();
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(entry.isIntersecting);
+            },
+            { threshold: 0.1 } // Adjust this threshold as needed
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, []);
+
     const responsibilities = [
         'Build dynamic and responsive web applications using React JS, including React hooks, lifecycle methods, and state management.',
         'Understand and utilize modern JavaScript features and syntax effectively.',
@@ -16,14 +40,22 @@ const Tab1 = () => {
     ];
 
     return (
-        <JobDescription
-            logo={Logo}
-            jobTitle="React JS Developer"
-            duration=" Jun 2022 - Present · 2 yrs"
-            company="Leora Infotech Private Limited · Full-time"
-            location="Gummidipoondi, Chennai · On-site"
-            responsibilities={responsibilities}
-        />
+        <div ref={ref}>
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
+            >
+                <JobDescription
+                    logo={Logo}
+                    jobTitle="React JS Developer"
+                    duration="Jun 2022 - Present · 2 yrs"
+                    company="Leora Infotech Private Limited · Full-time"
+                    location="Gummidipoondi, Chennai · On-site"
+                    responsibilities={responsibilities}
+                />
+            </motion.div>
+        </div>
     );
 };
 

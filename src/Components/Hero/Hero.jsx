@@ -1,9 +1,55 @@
-import React from 'react'
-import './Hero.css'
+import React, { useEffect, useRef } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import './Hero.css';
 
 const Hero = () => {
+    const controls = useAnimation();
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        controls.start('visible');
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        const section = sectionRef.current;
+        if (section) {
+            observer.observe(section);
+        }
+
+        return () => {
+            if (section) {
+                observer.unobserve(section);
+            }
+        };
+    }, [controls]);
+
+    const textVariants = {
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                duration: 0.8,
+                ease: 'easeInOut'
+            }
+        }
+    };
+
     return (
-        <div className='hero' id='hero'>
+        <motion.div
+            className='hero'
+            id='hero'
+            ref={sectionRef}
+            initial="hidden"
+            animate={controls}
+        >
             <div className='content'>
                 <div style={{ margin: 'auto' }} className="social-card">
                     <div className="boxshadow"></div>
@@ -35,12 +81,16 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <h1>Welcome to <span style={{ color: 'var(--primary-color)' }}>My Website</span></h1>
+                <motion.h1
+                    variants={textVariants}
+                    initial="hidden"
+                    animate={controls}
+                >
+                    Welcome to <span style={{ color: 'var(--primary-color)' }}>My Website</span>
+                </motion.h1>
             </div>
-
-
-        </div>
-    )
+        </motion.div>
+    );
 }
 
-export default Hero
+export default Hero;
