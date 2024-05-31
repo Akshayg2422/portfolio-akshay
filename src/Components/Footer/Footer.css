@@ -2,7 +2,7 @@
     width: 100%;
     background: var(--gradient2);
     color: #eee;
-    padding: 1rem 1rem;
+    padding: 1rem;
 }
 
 .footer .container {
@@ -14,7 +14,11 @@
 .footer ul {
     display: flex;
     justify-content: center;
-    margin-right: 30px;
+    flex-wrap: wrap;
+    /* Allows the items to wrap on smaller screens */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
 
 .footer li {
@@ -23,6 +27,8 @@
 
 .footer li a {
     color: #fff;
+    text-decoration: none;
+    /* Ensure links have no underline */
 }
 
 .footer li a:hover {
@@ -37,4 +43,19 @@
 
 .line {
     margin-bottom: 1rem;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .footer ul {
+        flex-direction: row;
+        /* Ensure items remain in a row */
+        justify-content: space-between;
+        /* Spread items out evenly */
+    }
+
+    .footer li {
+        padding: 0.5rem;
+        text-align: center;
+    }
 }

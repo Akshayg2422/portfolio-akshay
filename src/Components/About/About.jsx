@@ -32,7 +32,7 @@ const About = () => {
                             scale: 1.1,
                             x: 12
                         }}
-                    >Download Resume</motion.button>
+                    >Download CV</motion.button>
                 </div>
             </div>
         </div>
