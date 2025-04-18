@@ -39,6 +39,7 @@ export function Tabs({ tabs, selected, onChange, height }) {
                                     flex: "0 0 0 50%", // Make tabs take 50% of the width for small screens
                                     fontSize: '18px',
                                     fontWeight: 600,
+                                    cursor: 'pointer'
                                 }}
                                 onClick={() => {
                                     changeTab(item);

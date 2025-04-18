@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import JobDescription from '../../CommonComponent/JobDescription/JobDescription';
 import Logo from '../../assets/Logo/leoraLogo.png';
+import sightSpectrumLogo from '../../assets/Logo/sightSpectrumLogo.png';
+import CavinInfoLogo from '../../assets/Logo/cavinInfoLogo.svg';
 
 const Tab1 = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -30,8 +32,8 @@ const Tab1 = () => {
         'Build dynamic and responsive web applications using React JS, including React hooks, lifecycle methods, and state management.',
         'Understand and utilize modern JavaScript features and syntax effectively.',
         'Collaborate with UI/UX designers to enhance user experience.',
-        'Implement and adhere to HTML5 and CSS3 standards, including responsive design principles.',
-        'Utilize state management libraries such as Redux and React\'s Context API.',
+        'Implement and adhere to HTML5, CSS3, Bootstrap, Mui, Scss standards, including responsive design principles.',
+        'Utilize state management libraries such as Redux, Redux-toolkit and React\'s Context API.',
         'Develop reusable and modular components to ensure maintainable and scalable code.',
         'Optimize performance using techniques like virtualization, lazy loading, code splitting, and memoization.',
         'Troubleshoot and debug issues proactively to ensure smooth application functioning.',
@@ -47,12 +49,27 @@ const Tab1 = () => {
                 transition={{ duration: 0.5, ease: 'easeOut' }}
             >
                 <JobDescription
+                    logo={CavinInfoLogo}
+                    jobTitle="React JS Developer"
+                    duration="Nov 2024 - April 2025 · 2.11 years"
+                    company="Cavin Infotech Private Limited · Full-time"
+                    location="8th Floor, TECCI PARK, Elcot Sez, Karapakkam, Chennai . On-site"
+                    responsibilities={responsibilities}
+                />
+                <JobDescription
+                    logo={sightSpectrumLogo}
+                    jobTitle="React JS Developer"
+                    duration="June 2024 - October 2024"
+                    company="SightSpectrumTechnology Solutions (P) Ltd · Full-time"
+                    location="Tidel, Tiruvanmyur · Client-location"
+                />
+                <JobDescription
                     logo={Logo}
                     jobTitle="React JS Developer"
-                    duration="Jun 2022 - Present · 2 yrs"
+                    duration="Jun 2022 - June 2024"
                     company="Leora Infotech Private Limited · Full-time"
                     location="Gummidipoondi, Chennai · On-site"
-                    responsibilities={responsibilities}
+
                 />
             </motion.div>
         </div>

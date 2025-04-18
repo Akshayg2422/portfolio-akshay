@@ -35,13 +35,17 @@ const Skills = () => {
         { title: 'Css', level: '60%', styleClass: styles.css },
         { title: 'Scss', level: '60%', styleClass: styles.scss },
         { title: 'Bootstrap', level: '60%', styleClass: styles.bootstrap },
+        { title: 'Mui', level: '60%', styleClass: styles.bootstrap },
         { title: 'Typescript', level: '50%', styleClass: styles.typescript },
         { title: 'React', level: '70%', styleClass: styles.react },
         { title: 'Redux', level: '70%', styleClass: styles.redux },
+        { title: 'Redux-Toolkit', level: '70%', styleClass: styles.redux },
         { title: 'Redux-Saga', level: '70%', styleClass: styles.reduxSaga },
         { title: 'React-Router', level: '50%', styleClass: styles.reactRouter },
+        { title: 'Git', level: '80%', styleClass: styles.github },
         { title: 'GitHub', level: '80%', styleClass: styles.github },
         { title: 'Bitbucket', level: '90%', styleClass: styles.bitBucket },
+        { title: 'Azure', level: '90%', styleClass: styles.bitBucket },
     ];
 
     return (

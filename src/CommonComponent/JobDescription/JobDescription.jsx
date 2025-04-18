@@ -24,11 +24,18 @@ const JobDescription = ({ logo, jobTitle, duration, company, location, responsib
                         <p>{duration}</p>
                         <p>{location}</p>
 
-                        <ul>
+                        {/* <ul>
                             {responsibilities.map((item, index) => (
                                 <li key={index}>{item}</li>
                             ))}
-                        </ul>
+                        </ul> */}
+                         {responsibilities && responsibilities.length > 0 && (
+                            <ul>
+                                {responsibilities.map((item, index) => (
+                                    <li key={index}>{item}</li>
+                                ))}
+                            </ul>
+                        )}
                     </Col>
                 </Container>
             </section>
